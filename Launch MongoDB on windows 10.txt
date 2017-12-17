@@ -1,0 +1,15 @@
+Run Cmd prompt from C:\mongodb\bin
+
+Then make sure C:\data\db exists (check if possible to specify a different default folder)
+
+The run mongod.exe in the cmd prompt : The MongoDB is waiting the connection on port ...
+
+Run a second Cmd prompt from C:\mongodb\bin, and run mongo.exe
+
+In the project folder, launch git bash and run "npm start"
+
+Then, run "nodemon server"
+
+
+
+(mongod --dbpath C:/Project/FullVueJSNodePro/db --logpath C:/Project/FullVueJSNodePro/db/logfile.log)
