@@ -7,6 +7,7 @@
         </v-toolbar>
       
         <div class="pl-4 pr-4 pt-2 pb-2">
+          <form>
           <v-text-field
           name="email"
           label="Email"
@@ -17,14 +18,14 @@
           name="password"
           label="Password"
           hint="At least 8 characters"
-          v-model="Password"
+          v-model="password"
           min="8"
           :append-icon="e1 ? 'visibility' : 'visibility_off'"
           :append-icon-cb="() => (e1 = !e1)"
           :type="e1 ? 'password' : 'text'"
           counter>
         </v-text-field>
-
+        </form>
         <br>
         <div class="error" v-html="error" />
         <br>
@@ -58,7 +59,8 @@ export default {
           email: this.email,
           password: this.password
         })
-        console.log(response.data)
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         this.error = error.response.data.error
       }

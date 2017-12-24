@@ -22,7 +22,7 @@ module.exports = {
         res.status(400).send({
           error: `The password provided failed to match the following rules :
           <br>
-          1. It must contain the following characters: lower case, upper case numerics.
+          1. It must contain the following characters: lower case, upper case, numerics.
           <br>
           2. It must be at least 8 characters in length, and at most 32 characters
           `
