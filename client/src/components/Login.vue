@@ -10,7 +10,9 @@
             :append-icon-cb="() => (e1 = !e1)" :type="e1 ? 'password' : 'text'" counter>
           </v-text-field>
         <br>
-        <div class="error" v-html="error" />
+        <v-alert dark class="ml-4" :value="error" transition="scale-transition" error>
+          {{error}}
+        </v-alert>
         <br>
         <v-btn dark class="cyan" @click="login">
           Login
@@ -55,7 +57,4 @@
 </script>
 
 <style scoped>
-  .error {
-    color: red;
-  }
 </style>

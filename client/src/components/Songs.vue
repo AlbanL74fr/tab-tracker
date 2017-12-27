@@ -2,7 +2,7 @@
   <v-layout column>
     <v-flex xs6 offset-xs3>
       <panel title="Songs">
-        <v-btn slot="action" :to="{ name: 'songs-create' }" class="blue" fab light medium absolute right middle>
+        <v-btn slot="action" :to="{ name: 'song-create' }" class="blue" fab light medium absolute right middle>
           <v-icon>
             add
           </v-icon>

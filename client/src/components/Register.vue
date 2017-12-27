@@ -11,7 +11,9 @@
           counter>
         </v-text-field>
         <br>
-        <div class="error" v-html="error" />
+        <v-alert class="ml-4" :value="error" transition="scale-transition" error>
+          {{error}}
+        </v-alert>
         <br>
         <v-btn dark class="cyan" @click="register">
           Register
@@ -56,7 +58,4 @@
 </script>
 
 <style scoped>
-  .error {
-    color: red;
-  }
 </style>
