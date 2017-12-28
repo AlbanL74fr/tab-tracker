@@ -26,7 +26,6 @@
 
 <script>
   import AuthenticationService from '@/services/AuthenticationService'
-  import Panel from '@/components/Panel'
 
   export default {
     data () {
@@ -36,9 +35,6 @@
         e1: true,
         error: null
       }
-    },
-    components: {
-      Panel
     },
     methods: {
       async register () {

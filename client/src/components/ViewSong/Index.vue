@@ -20,7 +20,6 @@
 </template>
 
 <script>
-  import Panel from '@/components/Panel'
   import SongsService from '@/services/SongsService'
   import SongMetadata from './SongMetadata'
   import Youtube from './Youtube'
@@ -38,13 +37,11 @@
       this.song = (await SongsService.show(songId)).data
     },
     components: {
-      Panel,
       SongMetadata,
       Youtube,
       Lyrics,
       Tab
     }
-
   }
 </script>
 

@@ -25,7 +25,6 @@
 
 <script>
   import AuthenticationService from '@/services/AuthenticationService'
-  import Panel from '@/components/Panel'
 
   export default {
     data () {
@@ -36,9 +35,6 @@
         error: null
       }
     },
-    components: {
-      Panel
-    },
     methods: {
       async login () {
         try {
@@ -48,6 +44,9 @@
           })
           this.$store.dispatch('setToken', response.data.token)
           this.$store.dispatch('setUser', response.data.user)
+          this.$router.push({
+            name: 'songs'
+          })
         } catch (error) {
           this.error = error.response.data.error
         }

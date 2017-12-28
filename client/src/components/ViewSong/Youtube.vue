@@ -7,7 +7,6 @@
 
 <script>
   // import SongsService from '@/services/SongsService'
-  import Panel from '@/components/Panel'
   import VueYouTubeEmbed from 'vue-youtube-embed'
 
   export default {
@@ -15,7 +14,6 @@
       'youtubeId'
     ],
     components: {
-      Panel,
       VueYouTubeEmbed
     }
   }
